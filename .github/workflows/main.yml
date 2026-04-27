@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: Mostrar mensaje
         run: echo "Mensaje de mostrar mensaje"
-    
+      - name: Fallo intencionado
+        run: exit 1
