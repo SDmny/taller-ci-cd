@@ -22,7 +22,7 @@ jobs:
 
       - name: Verificar archivo
         run: |
-          if [ ! -f "$GITHUB_WORKSPACE/taller_api/app.js" ]; then
+          if [ ! -f "$GITHUB_WORKSPACE/app.js" ]; then
             echo "El archivo app.js no existe."
             exit 1
           fi
