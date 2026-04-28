@@ -4,26 +4,26 @@ on:
   push:
     branches: ["main"]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+  jobs:
+    build:
+      runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout del codigo
-        uses: actions/checkout@v4
+      steps:
+        - name: Checkout del codigo
+          uses: actions/checkout@v4
 
-      - name: Usar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+        - name: Usar Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: "20"
 
-      - name: Construir app con node
-        run: npm install
+        - name: Construir app con node
+          run: npm install
 
-      - name: Verificar si app.js eiste
-        run: |
-          if [! -f "$GITHUB_WORKSPACE/taller_api/app.js" ]; then
-            echo "El archivo app.js no existe."
-            exit 1
-          fi
-            echo "El archivo app.js existe. Continuando..."
+        - name: Verificar si app.js eiste
+          run: |
+            if [! -f "$GITHUB_WORKSPACE/app.js" ]; then
+              echo "El archivo app.js no existe."
+              exit 1
+            fi
+              echo "El archivo app.js existe. Continuando..."
