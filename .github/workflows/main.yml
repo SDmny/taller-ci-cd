@@ -28,3 +28,6 @@ jobs:
           fi
 
           echo "El archivo app.js existe. Continuando..."
+
+      - name: Ejecutar pruebas
+        run: npm test
